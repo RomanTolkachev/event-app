@@ -26,6 +26,10 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/EventDetailsViev.vue')
     },
+    {
+      path: '/:catchAll(.*)*',
+      component: () => import('../views/404.vue')
+    },
   ]
 })
 
